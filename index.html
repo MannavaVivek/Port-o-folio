@@ -1,71 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sam's Portfolio</title>
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="#projects">PROJECTS</a></li>
-      <li><a href="#writing">WRITING</a></li>
-      <li><a href="#about">ABOUT</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-    <section id="bio">
-        <div id="bio-content">
-          <h1>Hi, I am Vivek Mannava</h1>
-          <p>I am a software engineer.</p>
-          <p id="dynamic-text"></p>
-        </div>
-        <div id="bio-image">
-          <img src="photo.jpg" alt="Vivek Mannava">
-        </div>
-    </section>
-      
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-tile">
-          <div class="company-details">
-            <h3>Ledlenser GmbH & Co. KG</h3>
-            <p>Work-student- software development</p>
-            <p>2021 - 2024</p>
+  <header>
+    <img id="logo" src="photo.jpg" alt="Logo">
+    <button id="contact">Contact Me</button>
+  </header>
+  <section id="gray-section">
+    <div id="text-half">
+      <h1>Welcome to my website!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, lectus eget bibendum volutpat, tellus nisi volutpat dolor, eu volutpat dui massa in lectus. Donec auctor, lectus eget bibendum volutpat, tellus nisi volutpat dolor, eu volutpat dui massa in lectus.</p>
+    </div>
+    <div id="photo-half">
+      <img id="photo" src="photo.jpg" alt="Photo">
+    </div>
+  </section>
+  
+  <h2 id="experience-heading">Experience</h2>
+  <div id="underline"></div>
+  
+  <section id="experience">
+    <div class="tile flip-container">
+        <div class="flipper">
+          <div class="front">
+            <h2>Experience 1</h2>
           </div>
-          <div class="divider"></div>
-          <div class="experience-description">
-            <p>Designed and implemented a modular testing tool in Python to improve the efficiency and flexibility of product quality testing.</p>
+          <div class="back">
+            <p>Description for Experience 1</p>
           </div>
         </div>
-      
-        <!-- Repeat the .experience-tile block for each experience entry -->
-      </section>
-      
-
-  <section id="makerlog">
-    <h2>Makerlog Activity</h2>
-    <!-- Activity log would go here -->
+    </div>
+    <div class="tile flip-container">
+        <div class="flipper">
+          <div class="front">
+            <h2>Experience 2</h2>
+          </div>
+          <div class="back">
+            <p>Description for Experience 1</p>
+          </div>
+        </div>
+    </div>
+    <div class="tile flip-container">
+        <div class="flipper">
+          <div class="front">
+            <h2>Experience 3</h2>
+          </div>
+          <div class="back">
+            <p>Description for Experience 1</p>
+          </div>
+        </div>
+    </div>
   </section>
-
-  <section id="subscribe">
-    <h2>Get My Latest Content</h2>
-    <form id="subscription-form">
-      <input type="email" placeholder="Email" required>
-      <button type="submit">Subscribe to Newsletter</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <!-- Social links would go here -->
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
