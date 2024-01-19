@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam's Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#writing">WRITING</a></li>
+      <li><a href="#about">ABOUT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <section id="bio">
+        <div id="bio-content">
+          <h1>Hi, I am Vivek Mannava</h1>
+          <p>I am a software engineer.</p>
+          <p id="dynamic-text"></p>
+        </div>
+        <div id="bio-image">
+          <img src="photo.jpg" alt="Vivek Mannava">
+        </div>
+    </section>
+      
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-tile">
+          <div class="company-details">
+            <h3>Ledlenser GmbH & Co. KG</h3>
+            <p>Work-student- software development</p>
+            <p>2021 - 2024</p>
+          </div>
+          <div class="divider"></div>
+          <div class="experience-description">
+            <p>Designed and implemented a modular testing tool in Python to improve the efficiency and flexibility of product quality testing.</p>
+          </div>
+        </div>
+      
+        <!-- Repeat the .experience-tile block for each experience entry -->
+      </section>
+      
+
+  <section id="makerlog">
+    <h2>Makerlog Activity</h2>
+    <!-- Activity log would go here -->
+  </section>
+
+  <section id="subscribe">
+    <h2>Get My Latest Content</h2>
+    <form id="subscription-form">
+      <input type="email" placeholder="Email" required>
+      <button type="submit">Subscribe to Newsletter</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <!-- Social links would go here -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
