@@ -1,26 +1,29 @@
-function viewWork() {
-    // You would implement the logic to navigate to the work section or display work
-    console.log('View work button clicked');
-  }
-  
-  document.getElementById('subscription-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for subscribing!');
+function filterProjects(category) {
+  var items = document.querySelectorAll('.project-item');
+  items.forEach(function(item) {
+      if (item.classList.contains(category) || category === 'all') {
+          item.style.display = 'block';
+      } else {
+          item.style.display = 'none';
+      }
   });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var dynamicText = document.getElementById('dynamic-text');
-    var phrase = "I am a software engineer.";
-    var i = 0;
-  
-    function typeWriter() {
-      if (i < phrase.length) {
-        dynamicText.innerHTML += phrase.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100); // Adjust typing speed by changing the timeout
+  // Update button appearance
+  var buttons = document.querySelectorAll('.category-button');
+  buttons.forEach(function(button) {
+      if (button.textContent.toLowerCase() === category) {
+          button.classList.add('active');
+      } else {
+          button.classList.remove('active');
       }
-    }
-  
-    typeWriter();
   });
-  
+}
+
+function toggleProjectDetails(projectId) {
+  var details = document.getElementById(projectId);
+  var isVisible = details.style.display === 'block';
+  details.style.display = isVisible ? 'none' : 'block';
+}
+
+// Initialize with all projects visible
+filterProjects('all');

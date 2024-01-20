@@ -1,154 +1,159 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: white;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #logo {
-    height: 50px;
-  }
-  
-  #contact {
-    background-color: lightgray;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #A57BFB;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tile {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.front {
+  background-color: lightgray;
+  z-index: 2;
+}
+
+.back {
+  background-color: #f1f1f1;
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.tile:hover .back {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.tile:hover .front {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.tiles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center tiles horizontally */
+  flex-wrap: wrap; /* Wrap tiles to the next line if needed */
+  gap: 20px; /* Optional: Adds space between tiles */
+}
+
+.projects-container {
+  background-color: white;
+  padding: 20px;
+}
+
+.project-categories {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 0;
+}
+
+.category-button {
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-bottom: 3px solid transparent; /* For equal height of unselected buttons */
+}
+
+.category-button:hover,
+.category-button.active {
+  border-bottom: 3px solid black;
+}
+
+.project-list {
+  background-color: #A57BFB; /* Green background for project items */
+  color: white;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.project-item {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.project-item .project-title {
+  margin: 0;
+}
+
+.project-details {
+  display: none;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
   #gray-section {
-    background-color: gray;
-    min-height: 45vh; /* Use min-height instead of height */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px; /* Add padding */
+    flex-direction: column;
+    text-align: center; /* Center content for small screens */
   }
-  
-  #text-half {
-    width: 40%;
-    max-width: 100%; /* Ensure max width is not exceeded */
-    word-wrap: break-word; /* Prevents overflow caused by long unbroken text */
+
+  #text-half, #photo-half {
+    width: 100%;
   }
-  
-  #photo-half {
-    width: 40%;
-    max-width: 100%; /* Ensure max width is not exceeded */
-  }
-  
+
   #photo {
-    width: 100%;
-    border-radius: 15px; /* Adjust for rounded corners */
-    max-width: 100%; /* Ensure image does not cause overflow */
-  }
-  
-  #experience-heading {
-    text-align: center;
-    color: #333; /* Or any color of your choice */
     margin-top: 20px;
+    max-width: 80%; /* Adjust photo size for small screens */
+    margin-left: auto; /* Center the image */
+    margin-right: auto;
   }
-  
-  #underline {
-    width: 50px; /* Adjust the width as needed */
-    height: 4px; /* Thickness of the underline */
-    background-color: green; /* Stylish green color */
-    margin: 10px auto; /* Center the underline */
-  }
-
-    #experience {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows tiles to wrap on smaller screens */
-    align-items: center;
-    margin-top: 20px;
-    gap: 20px; /* Add some gap between tiles */
-    }
-    
-
-  .tile {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  .front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .front {
-    background-color: lightgray;
-    z-index: 2;
-  }
-  
-  .back {
-    background-color: #f1f1f1;
-    transform: rotateY(180deg);
-    opacity: 0;
-  }
-  
-  .tile:hover .back {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-  
-  .tile:hover .front {
-    transform: rotateY(-180deg);
-    opacity: 0;
-  }
-  
-  /* Your custom properties for additional effects */
-  @property --c-0 {
-    syntax: "<number>";
-    initial-value: 1;
-    inherits: false;
-  }
-  @property --c-1 {
-    syntax: "<number>";
-    initial-value: 1;
-    inherits: false;
-  }
-  
-  @media screen and (max-width: 768px) {
-    #experience {
-        flex-direction: column;
-        align-items: center; /* Center tiles in column layout */
-      }
-    
-      .tile {
-        margin-bottom: 20px;
-      }
-
-    #gray-section {
-      flex-direction: column;
-      text-align: center; /* Center content for small screens */
-    }
-  
-    #text-half, #photo-half {
-      width: 100%;
-    }
-  
-    #photo {
-      margin-top: 20px;
-      max-width: 80%; /* Adjust photo size for small screens */
-      margin-left: auto; /* Center the image */
-      margin-right: auto;
-    }
-  }
+}
