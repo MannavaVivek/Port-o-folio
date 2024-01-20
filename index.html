@@ -9,12 +9,14 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">Logo</div>
+      <div class="logo">
+        <img src="logo.png" alt="logo" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>      
         <div class="contact">
             <button class="contact-button">Contact Me</button>
         </div>
     </header>
-    <section class="landing" style="background-color: #A57BFB;">
+    <section class="landing" style="background-color: #392467;">
         <h1 style="color: white;">Hello, I am Vivek Mannava, A software engineer.</h1>
     </section>
     <section class="experience">
@@ -57,37 +59,55 @@
       </div>
       <div class="project-list">
           <div class="project-item all ongoing" onclick="toggleProjectDetails('project1')">
-              <h3 class="project-title">Project 1</h3>
+              <h3 class="project-title">
+                <span class="arrow">&#9656;</span>
+                Project 1
+              </h3>
               <div class="project-details" id="project1">
                   <p>Description for Project 1.</p>
                   <a href="https://github.com/project1">GitHub Link</a>
               </div>
           </div>
           <div class="project-item all past" onclick="toggleProjectDetails('project2')">
-              <h3 class="project-title">Project 2</h3>
+              <h3 class="project-title">
+                <span class="arrow">&#9656;</span>
+                Project 2
+              </h3>
               <div class="project-details" id="project2">
                   <p>Description for Project 2.</p>
                   <a href="https://github.com/project2">GitHub Link</a>
               </div>
           </div>
           <div class="project-item all past" onclick="toggleProjectDetails('project3')">
-            <h3 class="project-title">Project 3</h3>
+            <h3 class="project-title">
+              <span class="arrow">&#9656;</span>
+              Project 3
+            </h3>
             <div class="project-details" id="project3">
                 <p>Description for Project 3.</p>
                 <a href="https://github.com/project2">GitHub Link</a>
             </div>
         </div>
         <div class="project-item all past" onclick="toggleProjectDetails('project4')">
-          <h3 class="project-title">Project 4</h3>
+          <h3 class="project-title">
+            <span class="arrow">&#9656;</span>
+            Project 4
+          </h3>
           <div class="project-details" id="project4">
               <p>Description for Project 4.</p>
               <a href="https://github.com/project2">GitHub Link</a>
           </div>
+        </div>
       </div>
-          <!-- Add more project items as needed -->
+    </section>
+    <section class="about-me">
+      <div class="rounded-square">
+          <img src="photo.jpg" alt="Profile Image">
       </div>
-  </section>
-  
-  
+      <div class="about-me-text">
+          <h2>About Me</h2>
+          <p>This is a paragraph of text that provides information about me. It could be my personal story, my interests, or any other relevant information.</p>
+      </div>
+    </section>
 </body>
 </html>

@@ -21,9 +21,11 @@ function filterProjects(category) {
 
 function toggleProjectDetails(projectId) {
   var details = document.getElementById(projectId);
-  var isVisible = details.style.display === 'block';
-  details.style.display = isVisible ? 'none' : 'block';
+  var projectItem = details.closest('.project-item');
+  projectItem.classList.toggle('expanded');
 }
+
+
 
 // Initialize with all projects visible
 filterProjects('all');

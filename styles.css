@@ -8,12 +8,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #A57BFB;
+  background-color: #392467;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 75px; 
+  height: 75px; 
+  overflow: hidden;
+  color: white;
 }
 
 .contact {
@@ -44,6 +46,14 @@ body {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  background-color: white; /* Changed from gray to white */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for shadow and transform */
+}
+
+.tile:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Larger shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 .front, .back {
@@ -51,18 +61,27 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, box-shadow 0.5s; /* Added box-shadow transition */
 }
 
 .front {
-  background-color: lightgray;
+  background-color: white;
+  box-shadow: #4CAF50;
+  shape-margin: 5px black;
   z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .back {
-  background-color: #f1f1f1;
+  background-color: #ba80fc46;
   transform: rotateY(180deg);
   opacity: 0;
+}
+
+.tile:hover .front {
+  transform: rotateY(-180deg);
+  opacity: 0;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
 }
 
 .tile:hover .back {
@@ -70,10 +89,6 @@ body {
   opacity: 1;
 }
 
-.tile:hover .front {
-  transform: rotateY(-180deg);
-  opacity: 0;
-}
 
 .experience {
   display: flex;
@@ -136,8 +151,41 @@ body {
 }
 
 .project-details {
-  display: none;
-  padding: 10px;
+  max-height: 0; /* Start with max-height 0 to ensure it's hidden */
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.expanded .project-details {
+  max-height: 150px; /* Set a max-height that will accommodate the content */
+  padding: 10px 20px; /* Restore padding when expanded */
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.expanded .arrow {
+  transform: rotate(90deg); /* Rotates the arrow to point downwards */
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rounded-square {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.about-me-text {
+  max-width: 400px;
 }
 
 @media screen and (max-width: 768px) {
