@@ -1,113 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<body>
-    <header class="header">
-      <div class="logo">
-        <img src="logo.png" alt="logo" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>      
-        <div class="contact">
-            <button class="contact-button">Contact Me</button>
-        </div>
-    </header>
-    <section class="landing" style="background-color: #392467;">
-        <h1 style="color: white;">Hello, I am Vivek Mannava, A software engineer.</h1>
-    </section>
-    <section class="experience">
-        <h2 style="text-align: center; border-bottom: 2px solid #A57BFB; padding-bottom: 0.5rem;">Experience</h2>
-        <div class="tiles-container">
-          <div class="tile">
-            <div class="front">
-              <h2>Experience 1</h2>
-            </div>
-            <div class="back">
-              <p>Description for Experience 1</p>
-            </div>
-          </div>
-          <div class="tile">
-            <div class="front">
-              <h2>Experience 2</h2>
-            </div>
-            <div class="back">
-              <p>Description for Experience 2</p>
-            </div>
-          </div>
-          <div class="tile">
-            <div class="front">
-              <h2>Experience 3</h2>
-            </div>
-            <div class="back">
-              <p>Description for Experience 3</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="projects-section">
-      <div style="text-align: center;">
-        <h2 style="display: inline-block; border-bottom: 2px solid #A57BFB; padding-bottom: 0.5rem;">Projects</h2>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resume - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+          
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          </li>
+        </ul>
       </div>
-      <div class="project-categories">
-        <button class="category-button active" id="all" onclick="filterProjects('all')">All</button>
-        <button class="category-button" id="ongoing" onclick="filterProjects('ongoing')">Ongoing</button>
-        <button class="category-button" id="past" onclick="filterProjects('past')">Past</button>
-      </div>
-      <div class="project-list">
-          <div class="project-item all ongoing" onclick="toggleProjectDetails('project1')">
-              <h3 class="project-title">
-                <span class="arrow">&#9656;</span>
-                Project 1
-              </h3>
-              <div class="project-details" id="project1">
-                  <p>Description for Project 1.</p>
-                  <a href="https://github.com/project1">GitHub Link</a>
-              </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Vivek
+            <span class="text-primary">Mannava</span>
+          </h1>
+          <div class="subheading mb-3">BONN 53119 · GERMANY · 
+            <a href="mailto:vivekmannava@gmail.com">vivekmannava@gmail.com</a>
           </div>
-          <div class="project-item all past" onclick="toggleProjectDetails('project2')">
-              <h3 class="project-title">
-                <span class="arrow">&#9656;</span>
-                Project 2
-              </h3>
-              <div class="project-details" id="project2">
-                  <p>Description for Project 2.</p>
-                  <a href="https://github.com/project2">GitHub Link</a>
-              </div>
-          </div>
-          <div class="project-item all past" onclick="toggleProjectDetails('project3')">
-            <h3 class="project-title">
-              <span class="arrow">&#9656;</span>
-              Project 3
-            </h3>
-            <div class="project-details" id="project3">
-                <p>Description for Project 3.</p>
-                <a href="https://github.com/project2">GitHub Link</a>
+          <div id="appContainer" class="mb-5">
+            <p>I am a&nbsp;</p>
+            <div id="app"></div>
+           </div>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/vivekmannava12">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/vivek-mannava/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/MannavaVivek">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Development Intern</h3>
+              <div class="subheading mb-3">NEURA Robotics GmbH</div>
+              <p>Design of self modelling behavior trees for domestic service robots.</p>
             </div>
-        </div>
-        <div class="project-item all past" onclick="toggleProjectDetails('project4')">
-          <h3 class="project-title">
-            <span class="arrow">&#9656;</span>
-            Project 4
-          </h3>
-          <div class="project-details" id="project4">
-              <p>Description for Project 4.</p>
-              <a href="https://github.com/project2">GitHub Link</a>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">February 2024 - Present</span>
+            </div>
           </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software developer - Part time</h3>
+              <div class="subheading mb-3">Ledlenser GmbH & Co. KG</div>
+              <p>Designed and implemented a modular testing tool in Python to improve the efficiency and flexibility of product quality testing.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2022 - January 2024</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Programmer analyst trainee</h3>
+              <div class="subheading mb-3">Cognizant India</div>
+              <p>Part of back-end incident management and support team dealing with discrepancies in user information processing on IBM mainframes, for a USA-based health insurance client.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2020 - June 2021</span>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </section>
-    <section class="about-me">
-      <div class="rounded-square">
-          <img src="photo.jpg" alt="Profile Image">
-      </div>
-      <div class="about-me-text">
-          <h2>About Me</h2>
-          <p>This is a paragraph of text that provides information about me. It could be my personal story, my interests, or any other relevant information.</p>
-      </div>
-    </section>
-</body>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Hochschule Bonn-Rhein-Sieg</h3>
+              <div class="subheading mb-3">Master's in Autonomous systems</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2021 - 2024</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">SCSVMV University</h3>
+              <div class="subheading mb-3">Bachelors's in Mechatronics</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2017 - 2020</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Nettur Technical Training Foundation</h3>
+              <div class="subheading mb-3">Diploma in Mechatronics</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2014 - 2017</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicon-python-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-cplusplus-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-dart-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-git-plain"></i>
+            </li>
+          </ul>
+          <div class="subheading mb-3">Frameworks &amp; SDK </div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              ROS
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              ROS2
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Rasa
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Flutter
+            </li>
+          </ul>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>When I'm not hanging out with robots, you'll find me on a culinary adventure, whipping up dishes from around the world or getting my bake on. I'm also a total bookworm and a bit of a travel junkie. As I say, summers are for Europe, and winters are for Christmas markets. When at home, I'm usually messing around with different programming frameworks, always cooking up some fun project to learn new stuff. It's a quirky mix, but hey, that's me!</p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup> Place - Robocup @work world championship - Bordeaux, France 2023</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup> Place - ERL Smart City Socially Acceptable Item Delivery, Through
+              the Door challenges - Milton Keynes, UK 2023
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Certified Associate in Python Programming (PCAP)</li>
+            <li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script> 
+
+    <!-- Typewriter effect -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.js"></script>
+
+  </body>
+
 </html>
