@@ -125,4 +125,20 @@ a {
   display: flex;
   align-items: center;
 }
-    
+
+.project-details {
+  height: 0;
+  overflow: hidden;
+  padding-top: 10px;
+  transition: height 0.3s ease-out;
+  border-top: 1px solid #eee
+}
+
+.fa-li.fa.fa-play {
+  transition: transform 0.3s ease-out;
+}
+
+.fa-li.fa.fa-play.rotate {
+  transform: rotate(90deg);
+}
+

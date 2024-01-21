@@ -43,3 +43,30 @@ typewriter.typeString('<strong>Software Engineer</strong>')
     .typeString('<strong>Solo Traveller</strong>')
     .pauseFor(1500)
     .start();
+
+function toggleProjectDetails(projectId) {
+    var projectDetails = document.getElementById(projectId);
+    var icon = projectDetails.previousElementSibling; // Adjust as needed
+
+    // Check if the details are currently open
+    if (projectDetails.style.height) {
+        // If open, close them by setting height to 0
+        projectDetails.style.height = null;
+        icon.classList.remove('rotate');
+    } else {
+        // Temporarily set height to 'auto' to calculate the full expanded height
+        var prevHeight = projectDetails.style.height;
+        projectDetails.style.height = "auto";
+        var fullHeight = projectDetails.scrollHeight + "px";
+        projectDetails.style.height = prevHeight;
+
+        // After the browser has had a chance to paint, set the height to its full height
+        setTimeout(() => {
+            projectDetails.style.height = fullHeight;
+        }, 0);
+        icon.classList.add('rotate');
+    }
+}
+
+  
+  
