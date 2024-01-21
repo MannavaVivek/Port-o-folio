@@ -34,15 +34,40 @@ h2 {
 
 .list-social-icons a {
   color: #495057; }
-  .list-social-icons a:hover {
-    color: #0f9fbf; }
-  .list-social-icons a .fa-lg {
-    font-size: 1.75rem; }
-
+.list-social-icons a:hover {
+  color: #0f9fbf; }
+.list-social-icons a .fa-lg {
+  font-size: 1.75rem; }
+  
 .list-icons {
-  font-size: 3rem; }
-  .list-icons .list-inline-item i:hover {
-    color: #0f9fbf; }
+  font-size: 3rem;
+}
+
+.list-icons .list-inline-item i {
+  position: relative;
+}
+
+.list-icons .list-inline-item i:hover {
+  color: #0f9fbf;
+}
+
+.list-icons .list-inline-item i:hover::after {
+  content: attr(data-icon-name);
+  position: absolute;
+  bottom: -25px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #868e96ce;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: 'Open Sans';
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+  
+.clickable {
+  cursor: pointer; 
+}
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
@@ -108,6 +133,8 @@ a {
   color: #0f9fbf; }
   a:hover, a:focus, a:active {
     color: #824027; }
+  a:visited {
+    color: inherit }
 
 #appContainer {
   display: flex;
