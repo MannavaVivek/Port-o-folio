@@ -131,10 +131,8 @@ section.resume-section {
 
 a {
   color: #0f9fbf; }
-  a:hover, a:focus, a:active {
-    color: #824027; }
-  a:visited {
-    color: inherit }
+  a:hover {
+    color: #5f2222; }
 
 #appContainer {
   display: flex;
